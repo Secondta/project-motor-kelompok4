@@ -1,0 +1,46 @@
+{
+    "users": [
+      {
+        "id": 1,
+        "img": "https://assetcdnendpoint.azureedge.net/uploads/product/thumbnail/scoopy-2023-27052021-093501.png",
+        "merk": "Se-copy",
+        "rp": "Rp. 20,325,000",
+        "ket": "Baterai: 12 V 5 Ah, Kapasitas: 109.5 cc, Model bodi: Skuter, Kapasitas tangki bahan bakar: 4 sampai 4.2 l, Kecepatan maksimum: 115 km/jam"
+      },
+      {
+        "img": "https://assetcdnendpoint.azureedge.net/uploads/product/thumbnail/pcx-361-27052021-093821.png",
+        "merk": "PCR",
+        "rp": "Rp. 30,845,000",
+        "ket": "Mesin: 1 silinder, Model bodi: Skuter, Kapasitas tangki bahan bakar: 8 l, Kapasitas: 149.3 cc",
+        "id": 2
+      },
+      {
+        "id": 3,
+        "img": "https://assetcdnendpoint.azureedge.net/uploads/product/thumbnail/thumbnail-motor-new-cbr250rr-13082021-091044.png",
+        "merk": "CJR 250RR",
+        "rp": "Rp. 61,700,000",
+        "ket": "Voltase Aki: 12 V, Kapasitas Baterai: 7Ah, Kapasitas tangki bahan bakar:; 14.4 l, Kecepatan maksimum: 181 km/jam"
+      },
+      {
+        "id": 4,
+        "img": "https://assetcdnendpoint.azureedge.net/uploads/product/thumbnail/supra-x-125-fi-3-27052021-092008.png",
+        "merk": "Suprai X 125 FI",
+        "rp": "Rp. 18,455,000",
+        "ket": "Baterai: 12 V 3 Ah, Model bodi: Moped, Desain rangka bodi: Tulang Belakang, Kapasitas tangki bahan bakar: 4 l, Kecepatan maksimum: 118 km/jam"
+      },
+      {
+        "id": 5,
+        "img": "https://assetcdnendpoint.azureedge.net/uploads/product/thumbnail/supra-gtr-150-4-27052021-092133.png",
+        "merk": "GTA 150",
+        "rp": "Rp. 24,280,000",
+        "ket": "Baterai 12 V 5 Ah, Kapasitas tangki bahan bakar: 4.5 l, Desain rangka bodi: Twin Tube, Kecepatan maksimum: 140 km/jam"
+      },
+      {
+        "img": "https://assetcdnendpoint.azureedge.net/uploads/product/thumbnail/vario-150-2021-27052021-093802.jpg",
+        "merk": "Mario 150",
+        "rp": "Rp. 24,565,000",
+        "ket": "Baterai: 12 V 5 Ah, Model bodi: Skuter, Kapasitas tangki bahan bakar: 5.5 l, Kecepatan maksimum: 128 km/jam.",
+        "id": 6
+      }
+    ]
+  }

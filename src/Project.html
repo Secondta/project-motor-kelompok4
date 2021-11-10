@@ -1,4 +1,231 @@
-<template>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Project Kelompok4</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.0/dist/vue.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        #overlay {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 2;
+  cursor: pointer;
+}
+
+#text{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 50px;
+  color: white;
+  transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+}
+.border-hasil {
+      border: 1px solid black;
+      width: 10cm;
+      padding-left: 1rem;
+      margin-top: 1rem;
+      text-align: left;
+    }
+    body {
+      height: auto;
+    }
+    .border-hasil {
+      border: 1px solid black;
+      width: 10cm;
+      padding: 1rem;
+      margin-top: 1rem;
+      text-align: left;
+    }
+    .jumbotron {
+      background-color: #f85059;
+    }
+
+    .lead {
+      padding-left: 3cm;
+      padding-right: 3cm;
+    }
+
+    .akhir {
+      background-color: pink;
+      text-align: center;
+      padding-bottom: 1cm;
+    }
+
+    .callout {
+      position: fixed;
+      bottom: 35px;
+      right: 20px;
+      margin-left: 20px;
+      max-width: 300px;
+    }
+
+    .callout-header {
+      padding: 2rem;
+      background: red;
+      font-size: 30px;
+      color: white;
+    }
+
+    .callout-container {
+      padding: 2rem;
+      background-color: white;
+      color: black
+    }
+    .closebtn {
+      position: absolute;
+      top: 5px;
+      right: 15px;
+      color: white;
+      font-size: 30px;
+      cursor: pointer;
+    }
+
+    .closebtn:hover {
+      color: lightgrey;
+    }
+    * {
+  box-sizing: border-box;
+  
+}
+.a {
+  float: left;
+  width: 50%;
+  
+  padding-left: 10px;
+  height: 300px; 
+}
+ .row:after {
+  content: "";
+  display: table;
+  clear: both;
+  
+}
+ 
+* {
+  box-sizing: border-box;
+  
+}
+ 
+/* Create two equal columns that floats next to each other */
+.b {
+  float: left;
+  
+  width: 50%;
+  padding-left: 10px;
+  height: 150px; /* Should be removed. Only for demonstration */
+}
+ 
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+  
+}
+.img {
+  margin-left: 500px;
+  
+} 
+.flip-box {
+  background-color: transparent;
+  width: 1200px;
+  
+  height: 850px;
+  perspective: 1000px;
+  text-align: center;
+}
+ 
+.flip-box-inner {
+  position: relative;
+  width: 100%;
+  
+  height: 100%;
+  text-align: center;
+  transition: transform 0.9s;
+  transform-style: preserve-3d;
+}
+ 
+.flip-box:hover .flip-box-inner {
+  transform: rotateX(180deg);
+  
+}
+ 
+.flip-box-front, .flip-box-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+ 
+.flip-box-front {
+  color: black;
+  
+}
+ 
+.flip-box-back {
+  background-color: white;
+  color: black;
+  transform:rotateX(180deg);
+  padding-left: 60px;
+  
+}
+input {
+  opacity: 0;
+  position: fixed;
+}
+input[type="radio"]:checked + label {
+    border: 2px solid black;
+}
+* {
+    box-sizing: border-box;
+  }
+  .col {
+    float: left;
+    padding: 30px;
+  }
+  #app {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .img-2 {
+    width: 18rem;
+  }
+  .card {
+    padding: 10px;
+    background-color: rgb(248, 248, 248);
+  }
+
+span {
+    font-size: 13px;
+    color: grey;
+  }
+  p {
+    font-size: 15px;
+  }
+  .row {
+    padding-left: 95px;
+  }
+  #del, #ed {
+    background-color: rgb(238, 238, 238);
+    border-radius: 10px;
+    height: 25px;
+  }
+
+    </style>
+</head>
+
+<body>
   <div id="app">
     <!-- Awal Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
@@ -45,7 +272,7 @@
   <p class="lead">  <img class="img-thumbnail" src="https://gamedaim.com/wp-content/uploads/2021/06/Edwin-Starlest-Chia.jpg" width="200cm" style="border-radius: 50%;"> <br> <b>Sambutan Ceo:</b> <br> "Kami ingin bersama-sama merasakan kebahagiaan serta membagi perasaan cinta dalam suasana istimewa ini kepada pelanggan dan komunitas Yamaap, 
     dealer Yamaap, seluruh karyawan Yamaap dan tentunya untuk generasi masa depan Indonesia, 
     Kami ingin membangun ikatan kuat dengan Yamaap Family melalui aktivitas menarik dan produk yang dihasilkan. 
-    Selain itu juga selalu berusaha menciptakan kebahagiaan pelanggan dengan menyentuh perasaan mereka yang menjadi inspirasi kualitas produk-produk kami"<br> ~Edwin Chia, Ceo~</p>
+    Selain itu juga selalu berusaha menciptakan kebahagiaan pelanggan dengan menyentuh perasaan mereka yang menjadi inspirasi kualitas produk-produk kami"<br> ~Edwin "Starlest" Chia, Ceo~</p>
   <div class="container" style="background-color: #f85059;">
     <div class="row">
       <div class="col-md-6">
@@ -67,30 +294,98 @@
 
 <!-- Awal Info Motor -->
 <div id="info" style="padding-top: 8rem;">
+  <div id="app" class="container"><br>
+    <div class="card-judul">
+      <h1 style="text-align: center;">Pilih Motor Favorit Anda</h1><br><br>
+    </div>
+    <div style="text-align: center;">
+      <form @submit.prevent="add">
+        <input type="hidden" v-model="form.id" required>
+        <label for="">Gambar :</label><br><br>
+        <input type="text" v-model="form.img" required><br>
+        <label for="merk"><br>Merk :</label><br><br>
+        <input type="text" v-model="form.merk" required><br>
+        <label for="rp"><br>Harga :</label><br><br>
+        <input type="text" v-model="form.rp" required><br>
+        <label for="ket"><br>Spesifikasi :</label><br><br>
+        <input type="text" v-model="form.ket" required><br><br>
+        <button type="submit" v-show="!updateSubmit">Tambahkan</button>
+        <button type="button" v-show="updateSubmit" @click="update(form)">Perbarui</button>
+      </form>
+    </div>
+    <div class="card-isi" v-for="user in users" :key="user.id">
+      <div class="row">
+        <div class="col">
+          <div class="card" style="width: 18rem;">
+            <img class="card-img-top img-2" :src="user.img">
+            <div class="card-body">
+              <h3 class="card-title">{{ user.merk }}</h3>
+              <h4 class="card-text"><span>Harga Mulai</span><br><b>{{ user.rp }}</b></h4>
+              <p class="card-text">{{ user.ket }}</p><br>
+            </div>
+              <button @click="edit(user)" id="ed">Perbarui</button>
+              <button @click="del(user)" id="del">Hapus</button>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
 </div>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#f85059" fill-opacity="1" d="M0,192L26.7,197.3C53.3,203,107,213,160,197.3C213.3,181,267,139,320,128C373.3,117,427,139,480,154.7C533.3,171,587,181,640,186.7C693.3,192,747,192,800,192C853.3,192,907,192,960,176C1013.3,160,1067,128,1120,122.7C1173.3,117,1227,139,1280,170.7C1333.3,203,1387,245,1413,266.7L1440,288L1440,320L1413.3,320C1386.7,320,1333,320,1280,320C1226.7,320,1173,320,1120,320C1066.7,320,1013,320,960,320C906.7,320,853,320,800,320C746.7,320,693,320,640,320C586.7,320,533,320,480,320C426.7,320,373,320,320,320C266.7,320,213,320,160,320C106.7,320,53,320,27,320L0,320Z"></path></svg>
 <!-- Akhir Info Motor -->
-
-
 
 <!-- Awal Beli -->
     <div id="beli" style=" background-color: #f85059; padding-top: 8rem; padding-bottom: 1rem;">
         <br><br>
         <div class="container">
+          <!-- Row1 -->
           <div class="row">
             <div class="col-4">
-              <input style="position: absolute;" type="radio" id="mario" value=24,65,000 v-model="hargaA">&nbsp;&nbsp;&nbsp;&nbsp;
+              <input type="radio" id="mario" value=24.65.000 v-model="hargaA">&nbsp;&nbsp;&nbsp;&nbsp;
               <label for="mario"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKjbRfvoni81aYhCinhxE6CxtJvhuD4wuIjuOdqqwq20-acZRjQRdfEDfGl8xC_S2E6Og&usqp=CAU" alt="mario"> <br> <h4>Mario 150</h4> <br> Harga: <br> Rp. 24,565,000 <br> <br> Baterai: 12 V 15 Ah <br> Model bodi: Skuter <br> Kapasitas tangki bahan bakar: 5,5 l <br> Kecepatan Maksimum: 128 km/jam </label>
             </div>
             <div class="col-4">
-              <input style="position: absolute;" type="radio" id="berat" value=16.665.00 v-model="hargaA">&nbsp;&nbsp;&nbsp;&nbsp;
-              <label for="berat"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKjbRfvoni81aYhCinhxE6CxtJvhuD4wuIjuOdqqwq20-acZRjQRdfEDfGl8xC_S2E6Og&usqp=CAU" alt="mario"> <br> <h4>Mario 150</h4> <br> Harga: <br> Rp. 24,565,000 <br> <br> Baterai: 12 V 15 Ah <br> Model bodi: Skuter <br> Kapasitas tangki bahan bakar: 5,5 l <br> Kecepatan Maksimum: 128 km/jam </label>
+              <input type="radio" id="berat" value=16.665.00 v-model="hargaA">&nbsp;&nbsp;&nbsp;&nbsp;
+              <label for="berat"><img style="width: 7cm;" src="https://imgcdnblog.carbay.com/wp-content/uploads/2020/11/25121832/Yamaha-Gear-125-S-2.jpeg" alt="mario"> <br> <h4>Mario 150</h4> <br> Harga: <br> Rp. 16.665.00 <br> <br> Baterai: 12 V 15 Ah <br> Model bodi: Skuter <br> Kapasitas tangki bahan bakar: 5,5 l <br> Kecepatan Maksimum: 128 km/jam </label>
             </div>
             <div class="col-4">
-              <input style="position: absolute;" type="radio" id="se-copy" value=20.235.000 v-model="hargaA">&nbsp;&nbsp;&nbsp;&nbsp;
-              <label for="se-copy"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKjbRfvoni81aYhCinhxE6CxtJvhuD4wuIjuOdqqwq20-acZRjQRdfEDfGl8xC_S2E6Og&usqp=CAU" alt="mario"> <br> <h4>Mario 150</h4> <br> Harga: <br> Rp. 24,565,000 <br> <br> Baterai: 12 V 15 Ah <br> Model bodi: Skuter <br> Kapasitas tangki bahan bakar: 5,5 l <br> Kecepatan Maksimum: 128 km/jam </label>
+              <input type="radio" id="se-copy" value=20.235.000 v-model="hargaA">&nbsp;&nbsp;&nbsp;&nbsp;
+              <label for="se-copy"><img style="width: 7cm;" src="https://www.motorhondabandung.com/wp-content/uploads/2019/08/honda-scoopy-terbaru-2021.png" alt="mario"> <br> <h4>Mario 150</h4> <br> Harga: <br> Rp. 24,565,000 <br> <br> Baterai: 12 V 15 Ah <br> Model bodi: Skuter <br> Kapasitas tangki bahan bakar: 5,5 l <br> Kecepatan Maksimum: 128 km/jam </label>
             </div>
           </div>
+          <!-- Akhir Row1 -->
+          <!-- Row2 -->
+          <div class="row">
+            <div class="col-4">
+              <input type="radio" id="suprai" value=18.555.000 v-model="hargaA">&nbsp;&nbsp;&nbsp;&nbsp;
+              <label for="suprai"><img style="width: 7cm;" src="https://i0.wp.com/www.otomercon.com/wp-content/uploads/2015/11/2016-honda-supra-x-125-r-otomercon-2.jpg?ssl=1 " alt="mario"> <br> <h4>Suprai X 125 FI</h4> <br> Harga: <br> Rp. 18.455.000 <br> <br> Baterai: 12 V 3 Ah <br> Model bodi: Moped <br> Kapasitas tangki bahan bakar: 4 l <br> Kecepatan Maksimum: 118 km/jam <br> Desain rangka bodi: Tulang Belakang</label>
+            </div>
+            <div class="col-4">
+              <input type="radio" id="rewo-x" value=15.111.000 v-model="hargaA">&nbsp;&nbsp;&nbsp;&nbsp;
+              <label for="rewo-x"><img style="width: 8cm;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeTtIudFZUY_8iy0iqu348TAFyLUmnE_UY-A&usqp=CAU" alt="mario"> <br> <h4>Rewo X</h4> <br> Harga: <br> Rp. 15.110.000 <br> <br> Model bodi: Moped <br> Kapasitas tangki bahan bakar: 4 l <br> Kecepatan Maksimum: 110 km/jam <br> Mesin: 1 silinder <br> Desain rangka bodi: Tulang Belakang</label>
+            </div>
+            <div class="col-4">
+              <input type="radio" id="pcr" value=30.845.000 v-model="hargaA">&nbsp;&nbsp;&nbsp;&nbsp;
+              <label for="pcr"><img  style="width: 7cm;" src="https://asset.kompas.com/crops/_WvzK60_BXHkdYP_7DEBuprlcuU=/211x0:1261x700/750x500/data/photo/2020/12/08/5fcfa34e6d44d.png" alt="mario"> <br> <h4>PCR</h4> <br> Harga: <br> Rp. 30.845.000 <br> <br> Model bodi: Skuter <br> Kapasitas tangki bahan bakar: 8 l <br> Kapasitas: 149,3 cc </label>
+            </div>
+          </div>
+          <!-- Akhir Row2 -->
+          <!-- Row3 -->
+          <div class="row">
+            <div class="col-4">
+              <input type="radio" id="cjr" value=61.700.000 v-model="hargaA">&nbsp;&nbsp;&nbsp;&nbsp;
+              <label for="cjr"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVQqSImtnlB6vC32dNqGfPqgwmzWeDbHwICQ&usqp=CAU" alt="mario"> <br> <h4>CJR 250RR</h4> <br> Harga: <br> Rp. 61.700.000 <br> <br> Baterai: 7 Ah <br> Voltase Aki: 12 V <br> Kapasitas tangki bahan bakar: 14,4 l <br> Kecepatan Maksimum: 181 km/jam </label>
+            </div>
+            <div class="col-4">
+              <input type="radio" id="cjr2" value=38.180.000 v-model="hargaA">&nbsp;&nbsp;&nbsp;&nbsp;
+              <label for="cjr2"><img src="https://p-id.ipricegroup.com/uploaded_24e8bf5389a0d667d39132ed733b32e2.jpg" alt="mario"> <br> <h4>CJR 150R</h4> <br> Harga: <br> Rp. 38.180.000 <br> <br> Baterai: 12 V 5 Ah <br> Model bodi: Sepeda motor sport <br> Kapasitas: 149,2 cc <br> Kapasitas tangki bahan bakar: 12 l </label>
+            </div>
+            <div class="col-4">
+              <input type="radio" id="gta" value=24.280.000 v-model="hargaA">&nbsp;&nbsp;&nbsp;&nbsp;
+              <label for="gta"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKjbRfvoni81aYhCinhxE6CxtJvhuD4wuIjuOdqqwq20-acZRjQRdfEDfGl8xC_S2E6Og&usqp=CAU" alt="mario"> <br> <h4>GTA 150</h4> <br> Harga: <br> Rp. 24.280.000 <br> <br> Baterai: 12 V 5 Ah <br> Model bodi: Twin Tube <br> Kapasitas tangki bahan bakar: 4,5 l <br> Kecepatan Maksimum: 140 km/jam </label>
+            </div>
+          </div>
+          <!-- Akhir Row3 -->
         </div>
         <center>
               <div class="border-hasil">
@@ -98,18 +393,17 @@
                 <span>{{ "Rp." + hargaA }}</span>
                 <br>
                 <div id="overlay" onclick="off()">
-                    <div id="text">Barang berhasil dibeli, silahkan tunggu barang sampai dirumah anda dengan uang cash senilai: {{ "Rp." + hargaA }}</div>
+                    <div id="text">Barang berhasil dibeli, silahkan tunggu barang sampai dirumah anda dengan menyiapkan uang cash senilai: {{ "Rp." + hargaA }}</div>
                   </div>
                     <h3>Cash: </h3>
                     <span>{{ "Rp." + hargaA }}</span><br>
-                    <button onclick="on()" class="btn btn-light">Beli</button> <br> <br>
-                    <input type="radio" id="Kredit" value=30% v-model="hargaB">&nbsp;&nbsp;&nbsp;&nbsp;
-                    <label style="font-size: larger;" for="hargaB"><b>Kredit:</b>{{ hargaB + '*' + hargaA }}: {{ hargaC }}</label>
+                    <button onclick="on()" class="btn btn-light">Beli Cash</button> <br> <br>
+                    <input type="radio" id="kredit" value=30% v-model="hargaB">
+                    <label style="font-size: larger;" for="kredit"><b>Kredit:</b>{{ hargaB + '*' + hargaA }}: {{ hargaB * hargaA + ' DP Awal'}}</label>
               </div>
         </center>
       </div> 
 <!-- Akhir Beli -->
-
 <!-- Awal Proses Pengajuan -->
 <div id="proses"  style="padding-top: 8rem;">
   <h2 style="text-align: center;">Proses Pengajuan</h2>
@@ -250,6 +544,10 @@
         <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
       </svg> &nbsp; 
       <span>Twitter: <a href="https://twitter.com/yamahaindonesia" target="_blank">@ Yamaha Indonesia</a></span><br>
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
+        <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
+      </svg> &nbsp; 
+      <span>Whatsapp: <a href="https://wa.me/6285600381348" target="_blank">Kontak Kami</a> </span> <br>
         Email: ptyh_ptyamaafmotorsmobile@fmi.com 
       </p>
     </div>
@@ -321,4 +619,103 @@
 </div>
 <!-- Akhir Callout -->
   </div>
-</template>
+    <script>
+        var vo = new Vue({
+            el: '#beli',
+            data: {
+                hargaA: "",
+                hargaB: "",
+            },
+        });
+        function on() {
+  document.getElementById("overlay").style.display = "block";
+}
+
+function off() {
+  document.getElementById("overlay").style.display = "none";
+}
+    </script>
+</body>
+
+</html>
+<script>
+  /* eslint-disable */
+  import axios from 'axios'
+  export default {
+    data () {
+      return{
+        form: {
+          id: '',
+          img: '',
+          merk: '',
+          rp: '',
+          ket: ''
+   
+        },
+        users: '',
+        updateSubmit: false
+      }
+    },
+    mounted() {
+      this.load()
+    },
+    methods: {
+      load(){
+        axios.get('http://localhost:3000/users').then(res => {
+          this.users = res.data  
+        }).catch ((err) => {
+          console.log(err);
+        })
+      },
+      add(){
+        axios.post('http://localhost:3000/users', this.form).then(res => {
+          this.load()
+          this.form.id=''
+          // this.form.merk1 = '',
+          // this.form.rp1 = '',
+          // this.form.ket1 = '',
+          // this.form.merk2 = '',
+          // this.form.rp2 = '',
+          // this.form.ket2 = '',
+          // this.form.merk3 = '',
+          // this.form.rp3 = '',
+          // this.form.ket3 = '',
+          // this.form.merk4 = '',
+          // this.form.rp4 = '',
+          // this.form.ket4 = '',
+          // this.form.merk5 = '',
+          // this.form.rp5 = '',
+          // this.form.ket5 = '',
+          // this.form.merk6 = '',
+          // this.form.rp6 = '',
+          // this.form.ket6 = ''
+        })
+      },
+      edit(user){
+        window.scrollTo(0,0)
+          this.updateSubmit = true
+          this.form.id = user.id  
+          this.form.img = user.img
+          this.form.merk = user.merk
+          this.form.rp = user.rp
+          this.form.ket = user.ket
+      },
+      update(form){
+        return axios.put('http://localhost:3000/users/' + form.id , {img: this.form.img, merk: this.form.merk, rp: this.form.rp, ket: this.form.ket}).then(res => {
+          this.load()
+          window.location.reload()
+        }).catch((err) => {
+        console.log(err);
+   
+        })
+      },
+      del(user){
+        axios.delete('http://localhost:3000/users/' + user.id).then(res =>{
+            this.load()
+              let index = this.users.indexOf(form.merk1)
+              this.users.splice(index,1)
+        })
+      }
+    }
+  }
+  </script>

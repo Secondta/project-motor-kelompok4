@@ -1,17 +1,190 @@
 <!DOCTYPE html>
 <html lang="">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
-    <title><%= htmlWebpackPlugin.options.title %></title>
-  </head>
-  <body>
-    <noscript>
-      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
-    </noscript>
-    <div id="app"></div>
-    <!-- built files will be auto injected -->
-  </body>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.0/dist/vue.js"></script>
+  <link href='https://fonts.googleapis.com/css?family=Andika' rel='stylesheet'>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <title>
+    <%= htmlWebpackPlugin.options.title %>
+  </title>
+  <script>
+    var vo = new Vue({
+        el: '#beli',
+        data: {
+            hargaA: "",
+            hargaB: "",
+        },
+    });
+    function on() {
+document.getElementById("overlay").style.display = "block";
+}
+
+function off() {
+document.getElementById("overlay").style.display = "none";
+}
+</script>
+  <style>
+    body {
+      height: auto;
+    }
+    .border-hasil {
+      border: 1px solid black;
+      width: 10cm;
+      padding: 1rem;
+      margin-top: 1rem;
+      text-align: left;
+    }
+    .jumbotron {
+      background-color: #f85059;
+    }
+
+    .lead {
+      padding-left: 3cm;
+      padding-right: 3cm;
+    }
+
+    .akhir {
+      background-color: pink;
+      text-align: center;
+      padding-bottom: 1cm;
+    }
+
+    .callout {
+      position: fixed;
+      bottom: 35px;
+      right: 20px;
+      margin-left: 20px;
+      max-width: 300px;
+    }
+
+    .callout-header {
+      padding: 2rem;
+      background: red;
+      font-size: 30px;
+      color: white;
+    }
+
+    .callout-container {
+      padding: 2rem;
+      background-color: white;
+      color: black
+    }
+    .closebtn {
+      position: absolute;
+      top: 5px;
+      right: 15px;
+      color: white;
+      font-size: 30px;
+      cursor: pointer;
+    }
+
+    .closebtn:hover {
+      color: lightgrey;
+    }
+    * {
+  box-sizing: border-box;
+  
+}
+.a {
+  float: left;
+  width: 50%;
+  
+  padding-left: 10px;
+  height: 300px; 
+}
+ .row:after {
+  content: "";
+  display: table;
+  clear: both;
+  
+}
+ 
+* {
+  box-sizing: border-box;
+  
+}
+ 
+/* Create two equal columns that floats next to each other */
+.b {
+  float: left;
+  
+  width: 50%;
+  padding-left: 10px;
+  height: 150px; /* Should be removed. Only for demonstration */
+}
+ 
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+  
+}
+.img {
+  margin-left: 500px;
+  
+} 
+.flip-box {
+  background-color: transparent;
+  width: 1200px;
+  
+  height: 850px;
+  perspective: 1000px;
+  text-align: center;
+}
+ 
+.flip-box-inner {
+  position: relative;
+  width: 100%;
+  
+  height: 100%;
+  text-align: center;
+  transition: transform 0.9s;
+  transform-style: preserve-3d;
+}
+ 
+.flip-box:hover .flip-box-inner {
+  transform: rotateX(180deg);
+  
+}
+ 
+.flip-box-front, .flip-box-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+ 
+.flip-box-front {
+  color: black;
+  
+}
+ 
+.flip-box-back {
+  background-color: white;
+  color: black;
+  transform:rotateX(180deg);
+  padding-left: 60px;
+  
+}
+
+  </style>
+</head>
+
+<body>
+  <noscript>
+    <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled.
+        Please enable it to continue.</strong>
+  </noscript>
+  <div id="app"></div>
+  <!-- built files will be auto injected -->
+</body>
+
 </html>
